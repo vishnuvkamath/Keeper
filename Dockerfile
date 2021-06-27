@@ -1,0 +1,12 @@
+FROM node:alpine
+WORKDIR '/app'
+COPY package.json .
+RUN npm install
+COPY . .
+RUN npm run build
+
+#start of second block. next FROM automcatically sets close of first block
+
+FROM nginx
+COPY --from=0 /app/build /usr/share/nginx/html
+
