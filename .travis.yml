@@ -9,6 +9,7 @@ before_install:
 script:
   - docker run -e CI=true nucoxia/keeperapp npm run test
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 deploy:
   provider: elasticbeanstalk
@@ -23,3 +24,5 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
 =======
 >>>>>>> d64cb0d56184d8f99201b76d23b1fdc356e16920
+=======
+>>>>>>> refs/remotes/origin/main
