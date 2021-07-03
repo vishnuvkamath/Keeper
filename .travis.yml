@@ -9,7 +9,7 @@ before_install:
 script:
   - docker run -e CI=true nucoxia/keeperapp npm run test
 
-  deploy:
+deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker-keeper"
